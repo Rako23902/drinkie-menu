@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'MalintonMedium';
+    src: url('fonts/MalintonTrialVersion-Medium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'MalintonBlack';
+    src: url('fonts/MalintonTrialVersion-Black.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+html, body {
+    height: 5110px;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 5110px;
+    width: 100vw;
+    background: url('img/menu.jpg') top center / cover no-repeat;
+    background-color: #F7F1DD; /* fallback color */
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    padding-top: 121px; /* Prevent content from being hidden under navbar */
+}
+
+.top-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 80px; /* Set to your navbar height */
+    background: #558E62;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Align children to the bottom */
+}
+
+div.scrollmenu {
+    background-color: #558E62;
+    overflow: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+    font-family: MalintonMedium, sans-serif;
+    /* Optional: add a bottom border or padding if needed */
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  background-color: #558E62;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+  background-color: none;
+}
+
+.nav-gradient {
+    position: absolute;
+    top: 0;
+    width: 48px;
+    height: 80px;
+    pointer-events: none; /* Let clicks pass through */
+    z-index: 11; /* Above navbar content */
+}
+
+.nav-gradient-left {
+    left: 0;
+    background: linear-gradient(to right, #558E62, rgba(0,0,0,0));
+}
+
+.nav-gradient-right {
+    right: 0;
+    background: linear-gradient(to left, #558E62, rgba(0,0,0,0));
+}
